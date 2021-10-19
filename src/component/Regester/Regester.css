@@ -1,0 +1,8 @@
+.regester{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.register_btn{
+    padding-bottom: 53px;
+}

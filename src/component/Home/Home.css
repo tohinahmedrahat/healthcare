@@ -1,0 +1,22 @@
+.home{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding-top: 20px;
+    background-color: rgba(188, 241, 241, 0.753);
+    padding-left: 50px;
+    padding-bottom: 50px;
+}
+.baner_img img{
+    display: cover;
+    width: 100%;
+    position: relative;
+}
+.baner_img h1{
+    position: absolute;
+    top: 300px;
+    left: 20px;
+    font-size: 50px;
+    font-weight: bolder;
+    color:rgb(7, 65, 62);
+    text-transform: uppercase;
+}

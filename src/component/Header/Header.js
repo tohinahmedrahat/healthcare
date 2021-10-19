@@ -4,16 +4,16 @@ import { Link } from 'react-router-dom';
 import useAuth from '../../hooks/UseAuth/UseAuth';
 
 const Header = () => {
-    const {singOut} = useAuth();
+    const {singOut,user} = useAuth();
     return (
         <div>
             <Navbar bg="dark" variant="dark">
             <Container>
-                <Navbar.Brand href="#home">Navbar with text</Navbar.Brand>
+                
                 <Navbar.Toggle />
                 <Navbar.Collapse className="justify-content-end">
                 <Navbar.Text>
-                    
+                    <h5>{user.email}</h5>
                 </Navbar.Text>
                 </Navbar.Collapse>
             </Container>
@@ -25,17 +25,22 @@ const Header = () => {
             <Navbar.Collapse id="responsive-navbar-nav">
             
             <Nav className="ms-auto">
+                <Link to="/">
+                    <Button className="me-2" variant="light">Home</Button>
+                </Link>
                 <Link to="/service">
                     <Button variant="light">service</Button>
                 </Link>
-                <Link to="/service-detail">
-                    <Button variant="light" className="ms-2">service details</Button>
+                <Link to="/register">
+                    <Button variant="light" className="ms-2">register</Button>
                 </Link>
-                <Link to="/login">
+                {
+                    user.email?<Button onClick={singOut} variant="light" className="ms-2">SingOut</Button>:<Link to="/login">
                     <Button variant="light" className="ms-2">Login</Button>
                 </Link>
                 
-                <Button onClick={singOut} variant="light" className="ms-2">SingOut</Button>
+                
+                }
             
              </Nav>
 

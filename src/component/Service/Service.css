@@ -1,0 +1,18 @@
+.service{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    text-align: center;
+    padding-left: 100px;
+    grid-row-gap: 10px;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    background-color: thistle;
+}
+.service-container{
+    background-color: thistle;
+
+}
+.service-container h1{
+        text-transform: uppercase;
+        color: white;
+}
