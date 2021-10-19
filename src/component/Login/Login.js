@@ -5,7 +5,7 @@ import useAuth from '../../hooks/UseAuth/UseAuth';
 import "./Login.css";
 
 const Login = () => {
-    const {googleSingIn,user,inputEmail,inputPassword,singInWithEmailAndPassword,singOut} = useAuth();
+    const {user,inputEmail,inputPassword,singInWithEmailAndPassword,singOut} = useAuth();
     
     return (
         <div>
